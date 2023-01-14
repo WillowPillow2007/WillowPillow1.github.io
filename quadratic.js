@@ -49,13 +49,16 @@ function getID(i) {
     }
         select = document.getElementById('sign');
         option = select.options[select.selectedIndex];
-    if ((a > 0 && D < 0 && (option.value == "<" || option.value == "≤")) || 
+    if ((a > 0 && D < 0 && (option.value == "<" || option.value == "≤")) ||
+        (a < 0 && D < 0 && (option.value == ">" || option.value == "≥")) ||
         (a > 0 && D == 0 && option.value == "<") ||
         (a < 0 && D == 0 && option.value == ">")){
       con.innerHTML = "Tập nghiệm của bất phương trình là: S = ∅"
     }
     else if ((a > 0 && D < 0 && option.value == ">")  || 
              (a < 0 && D < 0 && option.value == "<")  ||
+             (a < 0 && D < 0 && option.value == "≤")  ||
+             (a > 0 && D < 0 && option.value == "≥")  ||
              (a > 0 && D == 0 && option.value == "≥") ||
              (a < 0 && D == 0 && option.value == "≤")) {
       con.innerHTML = "Tập nghiệm của bất phương trình là: S = R"
