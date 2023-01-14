@@ -16,11 +16,9 @@ input, label, select {
   width: 80px;	
   font-size: 28px;
 }
-
-#input {
-  font-size: 28px;
+#sign{
+  height: 40px;
 }
-
 button {
   width: 25%;
   margin: 30px auto;
@@ -42,4 +40,8 @@ button {
   padding: 25px 40px 10px 40px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   height: 75vh;
+}
+#span {
+  margin-left: 10px;
+  font-size: 30px;
 }
