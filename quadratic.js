@@ -29,6 +29,7 @@ function getID(i) {
     dis.innerHTML = 'Delta (b^2 - 4ac) = <span id="D"></span>';
     var d = getID("D");
     d.innerHTML = D.toString();
+    //Phương trình
     if (D < 0) {
       nos.innerHTML = "Phương trình ax^2 + bx + c = 0 vô nghiệm ∀x∈ R";
     } 
@@ -47,6 +48,7 @@ function getID(i) {
       s1.innerHTML = "x = " + S1.toString();
       s2.innerHTML = " hoặc x = " + S2.toString();
     }
+    //Bất phương trình
         select = document.getElementById('sign');
         option = select.options[select.selectedIndex];
     if ((a > 0 && D < 0 && (option.value == "<" || option.value == "≤")) ||
