@@ -8,24 +8,26 @@
   </head>
   
   <body>
-    <h1>Giải bất phương trình bậc 2 (ax^2 + bx+ c)</h1>
-    <div id="input">
-      <input id="a" value="0"> x <sup>2</sup> + <input id="b" value="0"> x +  <input id="c" value="0"> 
-      <label for="sign"></label>
-      <select name="sign" id="sign" onchange="update()">
-        <option value=">" selected>></option>
-        <option value="<"><</option>
-        <option value="≥">≥</option>
-        <option value="≤">≤ </option>
-      </select> 0
-    </div>
-    <button id="submit">Giải</button>
+    <div id="background">
+      <h1>Giải bất phương trình bậc 2 (ax^2 + bx+ c)</h1>
+      <div id="input">
+        <input id="a" value="0"> x <sup>2</sup> + <input id="b" value="0"> x +  <input id="c" value="0"> 
+        <label for="sign"></label>
+        <select name="sign" id="sign" onchange="update()">
+          <option value=">" selected>></option>
+          <option value="<"><</option>
+          <option value="≥">≥</option>
+          <option value="≤">≤ </option>
+        </select> 0
+      </div>
+      <button id="submit">Giải</button>
     <div id="answers">  
       <p id="DIS"></p>
       <p id="NOS"></p>
       <p id="S1"></p><p id="S2"></p>
       <p id="CON"></p>
     </div>
+  </div>
 
     <script src="quadratic.js"></script>
   </body>
