@@ -8,7 +8,7 @@ body {
   text-align: center;
   font-size: 20px;
   background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(78,255,0,1) 0%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(78,255,0,1) 25%, rgba(0,212,255,1) 100%);
 }
 
 input, label, select {
@@ -27,9 +27,6 @@ button {
   border: none;
   color: white;
   cursor: pointer;
-}
-#S1,#S2 {
-  display: none;
 }
 #background {
   margin-left: 200px;
