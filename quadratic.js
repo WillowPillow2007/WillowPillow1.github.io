@@ -54,10 +54,6 @@ function solve() {
       s1.innerHTML = "";
       s2.innerHTML = "";
       con.innerHTML = "";
-      if ( isNaN(a) || isNaN(b) || isNaN(c) ){
-        alert("'a','b','c' phải là các số thực")
-        return;
-      }
       if (a == 0 ){
         alert("'a' phải khác 0");
         return;
