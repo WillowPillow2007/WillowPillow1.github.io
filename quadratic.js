@@ -1,6 +1,39 @@
-$('input.float').on('input', function() {
-  this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+$("input").keypress(function (event) {
+  var inputCode = event.which;
+  var currentValue = $(this).val();
+  if (inputCode > 0 && (inputCode < 48 || inputCode > 57)) {
+      if (inputCode == 46) {
+          if (getCursorPosition(this) == 0 && currentValue.charAt(0) == '-') return false;
+          if (currentValue.match(/[.]/)) return false;
+      } 
+      else if (inputCode == 45) {
+          if (currentValue.charAt(0) == '-') return false;
+          if (getCursorPosition(this) != 0) return false;
+      } 
+      else if (inputCode == 8) return true;
+      else return false;
+
+  } 
+  else if (inputCode > 0 && (inputCode >= 48 && inputCode <= 57)) {
+      if (currentValue.charAt(0) == '-' && getCursorPosition(this) == 0) return false;
+  }
 });
+function getCursorPosition(element) {
+  if (element.selectionStart) return element.selectionStart;
+  else if (document.selection)
+  {
+      element.focus();
+      var r = document.selection.createRange();
+      if (r == null) return 0;
+
+      var re = element.createTextRange(),
+          rc = re.duplicate();
+      re.moveToBookmark(r.getBookmark());
+      rc.setEndPoint('EndToStart', re);
+      return rc.text.length;
+  }
+  return 0;
+}
 function getID(i) {
   return document.getElementById(i);
 }
